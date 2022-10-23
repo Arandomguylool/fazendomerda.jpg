@@ -105,7 +105,7 @@ class PlayState extends MusicBeatState
 	private static var prevCamFollow:FlxObject;
 
 	public var strumLineNotes:FlxTypedGroup<Sprite>;
-	private var playerStrums:FlxTypedGroup<Sprite>;
+	public var playerStrums:FlxTypedGroup<Sprite>;
 	private var dadStrums:FlxTypedGroup<Sprite>;
 
 
@@ -162,8 +162,8 @@ class PlayState extends MusicBeatState
 
 	public var hitAccuracy:Array<Float> = [];
 
-	private var iconP1:HealthIcon;
-	private var iconP2:HealthIcon;
+	public var iconP1:HealthIcon;
+	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
 
