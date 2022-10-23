@@ -4127,7 +4127,7 @@ class PlayState extends MusicBeatState
 		var black:FlxSprite = new FlxSprite(-300, -100).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		black.scrollFactor.set();
 
-		var screen:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bonus/FinalScreen', 'qt''));
+		var screen:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bonus/FinalScreen', 'qt'));
 		screen.setGraphicSize(Std.int(screen.width * 0.625));
 		screen.antialiasing = true;
 		screen.scrollFactor.set();
