@@ -90,10 +90,10 @@ class PlayState extends MusicBeatState
 	public var boyfriend:Boyfriend;
 	private var shadersLoaded:Bool = false;
 
-	private var notes:FlxTypedGroup<Note>;
+	public var notes:FlxTypedGroup<Note>;
 	private var unspawnNotes:Array<Note> = [];
 
-	private var strumLine:Sprite;
+	public var strumLine:Sprite;
 	private var curSection:Int = 0;
 
 	private var camFollow:FlxObject;
@@ -143,7 +143,7 @@ class PlayState extends MusicBeatState
 
 
 	private var gfSpeed:Int = 1;
-	private var health:Float = 1;
+	public var health:Float = 1;
 	var filters:Array<BitmapFilter> = [];
 	var camfilters:Array<BitmapFilter> = [];
 	private var combo:Int = 0;
@@ -164,8 +164,8 @@ class PlayState extends MusicBeatState
 
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
-	private var camHUD:FlxCamera;
-	public var camGame:FlxCamera;
+	public var camHUD:FlxCamera;
+	private var camGame:FlxCamera;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
