@@ -3200,8 +3200,8 @@ class PlayState extends MusicBeatState
 				
 				if (luaModchart != null)
 				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
+					camFollowX = luaModchart.getVar("followXOffset", "float");
+					camFollowY = luaModchart.getVar("followYOffset", "float");
 				}
 				
 				if (luaModchart != null)
@@ -3275,8 +3275,8 @@ class PlayState extends MusicBeatState
 				
 				if (luaModchart != null)
 				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
+					camFollowX = luaModchart.getVar("followXOffset", "float");
+					camFollowY = luaModchart.getVar("followYOffset", "float");
 				}
 				
 				if (luaModchart != null)
