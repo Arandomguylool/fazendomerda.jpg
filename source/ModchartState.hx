@@ -357,7 +357,7 @@ class ModchartState
 				
 				//shaders = new Array<LuaShader>();
 
-				var result = LuaL.dostring(lua, OpenFlAssets.getText("assets/data/" +PlayState.SONG.song.toLowerCase() + "/modchart.lua")); // execute le file
+				var result = LuaL.dostring(lua, OpenFlAssets.getText("assets/data/" + PlayState.SONG.song.toLowerCase() + "/modchart.lua")); // execute le file
 	
 				if (result != 0)
 				{
@@ -449,8 +449,8 @@ class ModchartState
 					PlayState.instance.KBATTACK_ALERTTRIPLE(pointless);
 				}));
 				trace(Lua_helper.add_callback(lua,"kbAttackAlertCuadruple", function(pointless:Bool = false) {
-					PlayState.instance.KBATTACK_ALERTCUADRUPLE(pointless);*/
-				}));
+					PlayState.instance.KBATTACK_ALERTCUADRUPLE(pointless);
+				}));*/
 				trace(Lua_helper.add_callback(lua,"kbAttack", function(prepare:Bool = false, sound:String = 'attack') {
 					PlayState.instance.KBATTACK(prepare, sound);
 				}));
