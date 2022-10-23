@@ -104,8 +104,8 @@ class PlayState extends MusicBeatState
 
 	private static var prevCamFollow:FlxObject;
 
-	public var strumLineNotes:FlxTypedGroup<Sprite>;
-	public var playerStrums:FlxTypedGroup<Sprite>;
+	public static var strumLineNotes:FlxTypedGroup<Sprite>;
+	public static var playerStrums:FlxTypedGroup<Sprite>;
 	private var dadStrums:FlxTypedGroup<Sprite>;
 
 
