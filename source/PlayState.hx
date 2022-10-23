@@ -85,9 +85,9 @@ class PlayState extends MusicBeatState
 	var judgementBar:Sprite;
 	private var pointAtGF:Bool = false;
 
-	private var dad:Character;
-	private var gf:Character;
-	private var boyfriend:Boyfriend;
+	public var dad:Character;
+	public var gf:Character;
+	public var boyfriend:Boyfriend;
 	private var shadersLoaded:Bool = false;
 
 	private var notes:FlxTypedGroup<Note>;
@@ -104,7 +104,7 @@ class PlayState extends MusicBeatState
 
 	private static var prevCamFollow:FlxObject;
 
-	private var strumLineNotes:FlxTypedGroup<Sprite>;
+	public var strumLineNotes:FlxTypedGroup<Sprite>;
 	private var playerStrums:FlxTypedGroup<Sprite>;
 	private var dadStrums:FlxTypedGroup<Sprite>;
 
@@ -165,7 +165,7 @@ class PlayState extends MusicBeatState
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
 	private var camHUD:FlxCamera;
-	private var camGame:FlxCamera;
+	public var camGame:FlxCamera;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
@@ -3879,17 +3879,17 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	function dodgeTimingOverride(newValue:Float = 0.22625):Void
+	public function dodgeTimingOverride(newValue:Float = 0.22625):Void
 	{
 		bfDodgeTiming = newValue;
 	}
 
-	function dodgeCooldownOverride(newValue:Float = 0.1135):Void
+	public function dodgeCooldownOverride(newValue:Float = 0.1135):Void
 	{
 		bfDodgeCooldown = newValue;
 	}	
 
-	function KBATTACK_TOGGLE(shouldAdd:Bool = true):Void
+	public function KBATTACK_TOGGLE(shouldAdd:Bool = true):Void
 	{
 		if(shouldAdd)
 			add(kb_attack_saw);
@@ -3897,7 +3897,7 @@ class PlayState extends MusicBeatState
 			remove(kb_attack_saw);
 	}
 
-	function KBALERT_TOGGLE(shouldAdd:Bool = true):Void
+	public function KBALERT_TOGGLE(shouldAdd:Bool = true):Void
 	{
 		if(shouldAdd)
 			add(kb_attack_alert);
@@ -3907,7 +3907,7 @@ class PlayState extends MusicBeatState
 
 	//False state = Prime!
 	//True state = Attack!
-	function KBATTACK(state:Bool = false, soundToPlay:String = 'attack'):Void
+	public function KBATTACK(state:Bool = false, soundToPlay:String = 'attack'):Void
 	{
 		if(!(SONG.song.toLowerCase() == "termination" || SONG.song.toLowerCase() == "tutorial")){
 			trace("Sawblade Attack Error, cannot use Termination functions outside Termination or Tutorial.");
@@ -3938,7 +3938,7 @@ class PlayState extends MusicBeatState
 			kb_attack_saw.offset.set(-333,0);
 		}
 	}
-	function KBATTACK_ALERT(pointless:Bool = false):Void //For some reason, modchart doesn't like functions with no parameter? why? dunno.
+	public function KBATTACK_ALERT(pointless:Bool = false):Void //For some reason, modchart doesn't like functions with no parameter? why? dunno.
 	{
 		if(!(SONG.song.toLowerCase() == "termination" || SONG.song.toLowerCase() == "tutorial")){
 			trace("Sawblade Alert Error, cannot use Termination functions outside Termination or Tutorial.");
@@ -3949,7 +3949,7 @@ class PlayState extends MusicBeatState
 	}
 
 	//OLD ATTACK DOUBLE VARIATION
-	function KBATTACK_ALERTDOUBLE(pointless:Bool = false):Void
+	public function KBATTACK_ALERTDOUBLE(pointless:Bool = false):Void
 	{
 		if(!(SONG.song.toLowerCase() == "termination" || SONG.song.toLowerCase() == "tutorial")){
 			trace("Sawblade AlertDOUBLE Error, cannot use Termination functions outside Termination or Tutorial.");
@@ -3960,7 +3960,7 @@ class PlayState extends MusicBeatState
 	}
 
 	//Pincer logic, used by the modchart but can be hardcoded like saws if you want.
-	function KBPINCER_PREPARE(laneID:Int,goAway:Bool):Void
+	public function KBPINCER_PREPARE(laneID:Int,goAway:Bool):Void
 	{
 		if(!(SONG.song.toLowerCase() == "termination" || SONG.song.toLowerCase() == "tutorial")){
 			trace("Pincer Error, cannot use Termination functions outside Termination or Tutorial.");
@@ -4079,7 +4079,7 @@ class PlayState extends MusicBeatState
 				trace("Invalid LaneID for pincer");
 		}
 	}
-	function KBPINCER_GRAB(laneID:Int):Void
+	public function KBPINCER_GRAB(laneID:Int):Void
 	{
 		if(!(SONG.song.toLowerCase() == "termination" || SONG.song.toLowerCase() == "tutorial")){
 			trace("PincerGRAB Error, cannot use Termination functions outside Termination or Tutorial.");
