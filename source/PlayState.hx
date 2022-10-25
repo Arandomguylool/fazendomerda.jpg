@@ -1840,14 +1840,14 @@ class PlayState extends MusicBeatState
 			if(SONG.song.toLowerCase() == 'censory-overload'){
 				camHUD.visible = false;
 				//BG
-				horrorStage.frames = Paths.getSparrowAtlas('stage/horrorbg');
+				horrorStage.frames = Paths.getSparrowAtlas('stage/horrorbg', 'qt');
 				horrorStage.animation.addByPrefix('idle', 'Symbol 10 instance ', 24, false);
 				horrorStage.antialiasing = true;
 				horrorStage.scrollFactor.set();
 				horrorStage.screenCenter();
 
 				//QT sprite
-				senpaiEvil.frames = Paths.getSparrowAtlas('cutscenev3');
+				senpaiEvil.frames = Paths.getSparrowAtlas('cutscenev3', 'qt');
 				senpaiEvil.animation.addByPrefix('idle', 'final_edited', 24, false);
 				senpaiEvil.setGraphicSize(Std.int(senpaiEvil.width * 0.875));
 				senpaiEvil.scrollFactor.set();
@@ -1913,7 +1913,7 @@ class PlayState extends MusicBeatState
 							{
 								senpaiEvil.animation.play('idle');
 								horrorStage.animation.play('idle');
-								FlxG.sound.play(Paths.sound('music-box-horror'), 0.9, false, null, true, function()
+								FlxG.sound.play(Paths.sound('music-box-horror', 'qt'), 0.9, false, null, true, function()
 								{
 									remove(senpaiEvil);
 									remove(red);
